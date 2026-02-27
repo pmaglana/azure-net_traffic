@@ -21,6 +21,10 @@ In this project we will configure the Network Security Group and observe traffic
 - Azure: Ubuntu VM
 - Azure: Virtual Network & Subnet
 
+>[!NOTE]
+>_Please refer to  [MS Azure Virtual Machines](https://github.com/pmaglana/azure-active-directory) for detailed instruction on how to create VMs._</br>
+>_Ensure both Virtual Machines are in the same Virtual Network / Subnet._
+      
 
 <h2>Getting Started</h2>
 
