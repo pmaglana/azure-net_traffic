@@ -5,7 +5,7 @@
 <h1>Firewall (NSG) Configuration & Observing Network Traffic</h1>
 
 <h2>About this Project</h2>
-In this project we will configure the Network Security Group and observe traffic between Azure Virtual Machines using Wireshark.
+In this project we will configure the Network Security Group and observe traffic between Azure Virtual Machines using Wireshark. You are also expected to be knowledgeable in Azure Virtual machines deployment and must be familiar with installing Softwares(WiresharK).
 
 <h2>Environment & Technology Used</h2>
 
@@ -30,15 +30,21 @@ In this project we will configure the Network Security Group and observe traffic
 
 <h3>Observing ICMP Traffic</h3>
 
-1. After deploying your Virtual machines in Azure, Let's use Remote Desktop to connect to your Windows Virtual Machine.
+1. After deploying your Virtual machines in Azure, connect to your Windows VM via Remote desktop.
 2. Within your Windows Virtual Machine, Install [Wireshark](https://www.wireshark.org)
 3. Open Wireshark and start packet capture
 4. Within Wireshark, filter for ICMP traffic only
-5. Retrieve the private IP address of the Ubuntu VM (linux-vm) and attempt to ping it from within the Windows VM.
-   
+5. Retrieve the Private IP address of the Linux/Ubuntu VM and attempt to ping it from within the Windows VM.
+
+   <img width="1875" height="627" alt="icmp5" src="https://github.com/user-attachments/assets/8f576c4d-7e5a-432f-a75e-7eea54093038" />
+
    a. Observe ping requests and replies within WireShark
 
+   <img width="1271" height="756" alt="icmp5a" src="https://github.com/user-attachments/assets/cc65bff9-5d5e-4a9f-80c1-43158a93edd3" />
+
 6. From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark
+
+   <img width="1156" height="728" alt="icmp6" src="https://github.com/user-attachments/assets/f8fa97b9-509f-401c-a625-310d6bb9590c" />
 
 <h3>Configuring a Firewall [Network Security Group]</h3>
 
