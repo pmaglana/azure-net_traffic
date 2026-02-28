@@ -15,16 +15,15 @@ In this project we will configure the Network Security Group and observe traffic
 - Wireshark
 
 <h2>Prerequisites</h2>
-In Azure, create the following: 
 
 - Resource Group
 - Windows Virtual Machine
-- Ubuntu VM
+- Ubuntu Virtual Machine (Authentication type: Username & Password)
 - Virtual Network & Subnet
 
 >[!NOTE]
 >_Please refer to  [MS Azure Virtual Machines](https://github.com/pmaglana/azure-active-directory) for detailed instruction on how to create VMs._</br>
->_Ensure both Virtual Machines are in the same Virtual Network / Subnet._
+>_Ensure both Virtual Machines are in the same Virtual Network & Subnet._
       
 
 <h2>Getting Started</h2>
