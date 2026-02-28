@@ -82,7 +82,7 @@ In Azure, create the following:
 <h2>Finishing Up</h2>
 <h3>Congratulations for completing this activity.</h3>
 
-<sub>*For questions and conerns Please reach out to paulo@maglana.com*</sub>
+<sub>*For questions and conerns, please reach out to paulo@maglana.com*</sub>
 
 
 
