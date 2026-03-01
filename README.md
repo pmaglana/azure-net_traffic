@@ -93,7 +93,9 @@ In this project we will configure the Network Security Group and observe traffic
 
    a. Open PowerShell as admin and run: ipconfig /renew.
    
-   b. Observe the DHCP traffic appearing in WireShark.   
+   b. Observe the DHCP traffic appearing in WireShark.
+
+   <img width="1440" height="506" alt="azure-dhcp" src="https://github.com/user-attachments/assets/7270629c-13db-4cff-a9f8-47c8ba89f1b7" />
 
 <h3>Observe DNS Traffic</h3>
 
@@ -102,6 +104,8 @@ In this project we will configure the Network Security Group and observe traffic
 
    a. Observe the DNS traffic being show in WireShark.
 
+   <img width="1443" height="510" alt="azure-dns" src="https://github.com/user-attachments/assets/c93f43be-b2e3-4404-ba42-81b0c2638ce7" />
+
 <h3>Observe RDP Traffic</h3>
 
 1. Back in Wireshark, filter for RDP traffic only (tcp.port == 3389).
@@ -109,7 +113,7 @@ In this project we will configure the Network Security Group and observe traffic
    
    <img width="940" height="758" alt="azure-rdp" src="https://github.com/user-attachments/assets/5d55cdd6-7116-4584-9a5f-a39d0cf7227a" />
 
-   RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
+   RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted.
 
    
 <h2>Finishing Up</h2>
