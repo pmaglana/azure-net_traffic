@@ -48,18 +48,44 @@ In this project we will configure the Network Security Group and observe traffic
 
 <h3>Configuring a Firewall [Network Security Group]</h3>
 
-1. Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM
+1. Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM.
 
-   a. Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic.
-   
+<img width="454" height="464" alt="nsg1" src="https://github.com/user-attachments/assets/5742dff8-7c34-46d7-b83c-a60414e6990b" />
+
+   a. Go back to Azure portal, under Networking > Network settings > Network security group, click vmLinux-nsg, under settings, click inbound security rules then click the + sign to add rules. Follow the settings showing below.
+
+   <img width="1687" height="519" alt="nsg2" src="https://github.com/user-attachments/assets/ac9421aa-0d45-4edc-b247-f7194ab52489" />
+   <img width="1690" height="856" alt="nsg3" src="https://github.com/user-attachments/assets/b2ea7d75-b73d-418e-be1a-04b84af31821" />
+
    b. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity.
 
-   c. Re-enable ICMP traffic for the Network Security Group your Ubuntu VM.
+   Before:
+   
+   <img width="454" height="574" alt="nsg5" src="https://github.com/user-attachments/assets/7f9a05b0-c72c-46d2-9a39-1a00c117ffd0" />
 
-   d. Re-enable ICMP traffic for the Network Security Group your Ubuntu VM.
+   After adding security rule:
+
+   <img width="454" height="574" alt="nsg5" src="https://github.com/user-attachments/assets/75b71072-ba11-4956-9a85-28a128365fba" />
+   
+   c. Re-enable ICMP traffic for the Network Security Group in Ubuntu VM. Observe the ICMP traffic in WireShark and the command line Ping activity (should start working)
+
+   <img width="450" height="411" alt="nsg6" src="https://github.com/user-attachments/assets/eb3cf4dd-5b89-4fea-bf7f-c3113484cc40" />
 
    e. Stop the ping activity.
+
+<h3>Observe SSH Traffic</h3>
+
+1. Log back into the windows-vm, open Wireshark, start a packet capture up and filter for SSH Traffic only.
+2. From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address)
    
+   a. Open PowerShell, and type: ssh labuser@(private IP address).
+   
+   b. Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+   
+   c. Exit the SSH connection by typing ‘exit’ and pressing [Enter]
+
+   <img width="1767" height="752" alt="azure-ssh" src="https://github.com/user-attachments/assets/69f73f11-09c7-443d-b24a-7182d923cd66" />
+
 <h3>Observe DHCP Traffic</h3>
 
 1. Back in Wireshark, filter for DHCP traffic only.
@@ -67,7 +93,7 @@ In this project we will configure the Network Security Group and observe traffic
 
    a. Open PowerShell as admin and run: ipconfig /renew.
    
-   b. Observe the DHCP traffic appearing in WireShark.
+   b. Observe the DHCP traffic appearing in WireShark.   
 
 <h3>Observe DNS Traffic</h3>
 
@@ -81,7 +107,9 @@ In this project we will configure the Network Security Group and observe traffic
 1. Back in Wireshark, filter for RDP traffic only (tcp.port == 3389).
 2. Observe the immediate non-stop spam of traffic? Why do you think it’s non-stop spamming vs only showing traffic when you do an activity?
    
-   - This is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
+   <img width="940" height="758" alt="azure-rdp" src="https://github.com/user-attachments/assets/5d55cdd6-7116-4584-9a5f-a39d0cf7227a" />
+
+   RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
 
    
 <h2>Finishing Up</h2>
