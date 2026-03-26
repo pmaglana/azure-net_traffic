@@ -1,5 +1,5 @@
 <p align="center">
-<img width="650" height="180" alt="wireshark" src="https://github.com/user-attachments/assets/d0e0f94b-00b7-4dad-8a02-8a5517a4b3b0" />
+<img width="2544" height="416" alt="wireshark" src="https://github.com/user-attachments/assets/be8256f0-ca2b-4517-b51c-63136dbd1ef7" />
 </p>
  
 <h1>Firewall (NSG) Configuration & Observing Network Traffic</h1>
